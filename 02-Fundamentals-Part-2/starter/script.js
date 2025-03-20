@@ -39,23 +39,34 @@
 
 
 
-const calcAverage = ( score1, score2, score3) => (score1 + score2 + score3 ) / 3;
+// const calcAverage = ( score1, score2, score3) => (score1 + score2 + score3 ) / 3;
 
-console.log(calcAverage(3, 6, 9));
+// console.log(calcAverage(3, 6, 9));
 
-const teamDolphins = calcAverage(85, 54, 41);
-const teamKoalas = calcAverage(23, 34, 27);
+// const teamDolphins = calcAverage(85, 54, 41);
+// const teamKoalas = calcAverage(23, 34, 27);
 
-console.log(teamDolphins, teamKoalas)
+// console.log(teamDolphins, teamKoalas)
 
-function checkWinner(avgDolphins, avgKoalas) {
-    if (avgDolphins >= avgKoalas * 2) {
-        console.log(`Team Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-    } else if (avgKoalas >= avgDolphins * 2) {
-        console.log(`Team Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-    } else {
-        console.log(`It's a draw match`)
-    }
-}
+// function checkWinner(avgDolphins, avgKoalas) {
+//     if (avgDolphins >= avgKoalas * 2) {
+//         console.log(`Team Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//     } else if (avgKoalas >= avgDolphins * 2) {
+//         console.log(`Team Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+//     } else {
+//         console.log(`It's a draw match`)
+//     }
+// }
 
-checkWinner(teamDolphins, teamKoalas);
+// checkWinner(teamDolphins, teamKoalas);
+
+
+// Exercise for Arrays 
+
+const calcAge = birthYear => 2025 - birthYear;
+
+const dateOfBirths = [1990, 1967, 2002, 2010, 2018];
+
+const ages = [calcAge(dateOfBirths[2]), calcAge(dateOfBirths[0]), calcAge(dateOfBirths[dateOfBirths.length - 1])];
+
+console.log(ages)
