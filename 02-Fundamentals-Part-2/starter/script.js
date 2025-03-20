@@ -63,10 +63,21 @@
 
 // Exercise for Arrays 
 
-const calcAge = birthYear => 2025 - birthYear;
+// const calcAge = birthYear => 2025 - birthYear;
 
-const dateOfBirths = [1990, 1967, 2002, 2010, 2018];
+// const dateOfBirths = [1990, 1967, 2002, 2010, 2018];
 
-const ages = [calcAge(dateOfBirths[2]), calcAge(dateOfBirths[0]), calcAge(dateOfBirths[dateOfBirths.length - 1])];
+// const ages = [calcAge(dateOfBirths[2]), calcAge(dateOfBirths[0]), calcAge(dateOfBirths[dateOfBirths.length - 1])];
 
-console.log(ages)
+// console.log(ages)
+
+
+
+// Exercise Array Methods   
+
+// Array.push('element') : Add elements to the end
+// Array.unshift('element') :  add elements to the start
+// Array.pop() : Removes the last element
+// Array.shift() : Removes the first element
+// Array.indexof('element') : returns the index of the element
+// Array.includes('element') : returns a boolean of whether the element is in the array or not 
