@@ -81,3 +81,37 @@
 // Array.shift() : Removes the first element
 // Array.indexof('element') : returns the index of the element
 // Array.includes('element') : returns a boolean of whether the element is in the array or not 
+
+
+// tip calculator 
+
+const getTipAmount = (per, bill) => ( per / 100 ) * bill;
+
+// console.log(getTipAmount(20, 200))
+
+function calcTip(bill) {
+
+    let tip;
+
+    if (bill >= 50 && bill <= 300) {
+        tip = getTipAmount(15, bill);
+    } else if (bill < 50 ) {
+        tip = `Thanks for shopping here`;
+    } else {
+        tip = getTipAmount(20, bill );
+    }
+
+    return tip;
+}
+
+let tip = calcTip(44);
+console.log(tip);
+
+const billList = [ 125, 555, 44];
+const tipList = [calcTip(billList[0]), calcTip(billList[1]), calcTip(billList[2])];
+
+const  totalBill = [billList[0] + calcTip(billList[0]), billList[1] + calcTip(billList[1]), billList[2] + calcTip(billList[2])]
+
+console.log(totalBill)
+
+console.log(tipList);
