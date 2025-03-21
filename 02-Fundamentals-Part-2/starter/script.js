@@ -85,33 +85,59 @@
 
 // tip calculator 
 
-const getTipAmount = (per, bill) => ( per / 100 ) * bill;
+// const getTipAmount = (per, bill) => ( per / 100 ) * bill;
 
 // console.log(getTipAmount(20, 200))
 
-function calcTip(bill) {
+// function calcTip(bill) {
 
-    let tip;
+//     let tip;
 
-    if (bill >= 50 && bill <= 300) {
-        tip = getTipAmount(15, bill);
-    } else if (bill < 50 ) {
-        tip = `Thanks for shopping here`;
-    } else {
-        tip = getTipAmount(20, bill );
-    }
+//     if (bill >= 50 && bill <= 300) {
+//         tip = getTipAmount(15, bill);
+//     } else if (bill < 50 ) {
+//         tip = `Thanks for shopping here`;
+//     } else {
+//         tip = getTipAmount(20, bill );
+//     }
 
-    return tip;
+//     return tip;
+// }
+
+// let tip = calcTip(44);
+// console.log(tip);
+
+// const billList = [ 125, 555, 44];
+// const tipList = [calcTip(billList[0]), calcTip(billList[1]), calcTip(billList[2])];
+
+// const  totalBill = [billList[0] + calcTip(billList[0]), billList[1] + calcTip(billList[1]), billList[2] + calcTip(billList[2])]
+
+// console.log(totalBill)
+
+// console.log(tipList);
+
+
+
+
+
+// Object Challenge 
+
+const jonas = {
+    firstName : 'jonas',
+    lastName : 'schmedtman',
+    age: 2025 -1991,
+    job : 'teacher',
+    friends : ['Michael', 'bob', 'Sandy'],
+    location : 'Portugal',
+    twitter: '@jonasschmedtman'
+};
+
+const interestedIn = prompt('Choose a prompt');
+
+if (jonas[interestedIn] === jonas.friends) {
+    console.log(`Jonas has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
+} else if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log(`Wrong request`);
 }
-
-let tip = calcTip(44);
-console.log(tip);
-
-const billList = [ 125, 555, 44];
-const tipList = [calcTip(billList[0]), calcTip(billList[1]), calcTip(billList[2])];
-
-const  totalBill = [billList[0] + calcTip(billList[0]), billList[1] + calcTip(billList[1]), billList[2] + calcTip(billList[2])]
-
-console.log(totalBill)
-
-console.log(tipList);
