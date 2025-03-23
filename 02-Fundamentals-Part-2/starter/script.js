@@ -122,22 +122,119 @@
 
 // Object Challenge 
 
-const jonas = {
-    firstName : 'jonas',
-    lastName : 'schmedtman',
-    age: 2025 -1991,
-    job : 'teacher',
-    friends : ['Michael', 'bob', 'Sandy'],
-    location : 'Portugal',
-    twitter: '@jonasschmedtman'
-};
+// const jonas = {
+//     firstName : 'jonas',
+//     lastName : 'schmedtman',
+//     age: 2025 -1991,
+//     job : 'teacher',
+//     friends : ['Michael', 'bob', 'Sandy'],
+//     location : 'Portugal',
+//     twitter: '@jonasschmedtman'
+// };
 
-const interestedIn = prompt('Choose a prompt');
+// const interestedIn = prompt('Choose a prompt');
 
-if (jonas[interestedIn] === jonas.friends) {
-    console.log(`Jonas has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
-} else if (jonas[interestedIn]) {
-    console.log(jonas[interestedIn]);
-} else {
-    console.log(`Wrong request`);
+// if (jonas[interestedIn] === jonas.friends) {
+//     console.log(`Jonas has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
+// } else if (jonas[interestedIn]) {
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log(`Wrong request`);
+// }
+
+
+
+
+
+
+// methods 
+
+// const jonas = {
+//     firstName : 'jonas',
+//     lastName : 'schmedtman',
+//     age: 2025 -1991,
+//     job : 'teacher',
+//     friends : ['Michael', 'bob', 'Sandy'],
+//     location : 'Portugal',
+//     twitter: '@jonasschmedtman',
+//     DriversLicense : true,
+
+//     summary: function() {
+//         const hasLicense = this.DriversLicense ? 'a' : 'no';
+
+//         console.log(`${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${hasLicense} driver's license. `);
+//     }
+// };
+
+// jonas.summary();
+
+
+
+
+// const johnBMI = {
+//     firtName : 'John',
+//     lastName : 'Smith',
+//     fullName : `John Smith`,
+//     mass : 92,
+//     height: 1.95,
+
+//     calcBMIfunct : function () {
+//         this.calcBMI =  this.mass / (this.height ** 2);
+//         return this.calcBMI;
+//     }
+// }
+
+// const MarkBMI = {
+//     firtName : 'Mark',
+//     lastName : 'Miller',
+//     fullName : `Mark Miller`,
+//     mass : 78,
+//     height: 1.69,
+
+//     calcBMIfunct : function () {
+//         this.calcBMI =  this.mass / (this.height ** 2);
+//         return this.calcBMI;
+//     }
+// }
+
+// const mark = MarkBMI.calcBMIfunct();
+// const john = johnBMI.calcBMIfunct();
+
+// console.log(mark, john);
+
+// if ( mark > john ) {
+//     console.log(`${MarkBMI.fullName}'s BMI (${MarkBMI.calcBMI}) is higher than ${johnBMI.fullName}'s BMI (${johnBMI.calcBMI}) `);
+// } else {
+//     console.log(`${johnBMI.fullName}'s BMI ${johnBMI.calcBMI} is higher than ${MarkBMI.fullName}'s BMI ${MarkBMI.calcBMI}`);
+// } 
+
+
+
+// for loop 
+
+// for ( let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+// }
+
+const jonas = ['Jonas', 'Schmedtmann', 2025 - 1991, 'teacher', 
+                ['Micheal', 34, 'Steven'], true]
+
+const types = [];
+const arrayValue = []
+
+for ( let items = 0; items < jonas.length; items++) {
+    let obj = typeof jonas[items];
+    let objCompare = typeof jonas;
+    if ( obj === objCompare) {
+        console.log('middle array')
+        for (let i = 0; i < jonas[items].length; i++) {
+            arrayValue.push(typeof jonas[items][i]);
+            console.log(`${jonas[items][i]} is a ${arrayValue[i]}`);
+        }
+    } else {
+            types.push(typeof jonas[items]);
+            console.log(`${jonas[items]} is a ${types[items]} value`);
+    }
 }
+
+console.log(typeof jonas[5])
