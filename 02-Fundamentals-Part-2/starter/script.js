@@ -216,25 +216,128 @@
 //     console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
 // }
 
-const jonas = ['Jonas', 'Schmedtmann', 2025 - 1991, 'teacher', 
-                ['Micheal', 34, 'Steven'], true]
 
-const types = [];
-const arrayValue = []
 
-for ( let items = 0; items < jonas.length; items++) {
-    let obj = typeof jonas[items];
-    let objCompare = typeof jonas;
-    if ( obj === objCompare) {
-        console.log('middle array')
-        for (let i = 0; i < jonas[items].length; i++) {
-            arrayValue.push(typeof jonas[items][i]);
-            console.log(`${jonas[items][i]} is a ${arrayValue[i]}`);
-        }
+// const jonas = ['Jonas', 'Schmedtmann', 2025 - 1991, 'teacher', 
+//                 ['Micheal', 34, 'Steven'], true]
+
+// const types = [];
+// const arrayValue = []
+
+// for ( let items = 0; items < jonas.length; items++) {
+//     let obj = typeof jonas[items];
+//     let objCompare = typeof jonas;
+//     if ( obj === objCompare) {
+//         console.log('middle array')
+//         for (let i = 0; i < jonas[items].length; i++) {
+//             arrayValue.push(typeof jonas[items][i]);
+//             console.log(`${jonas[items][i]} is a ${arrayValue[i]}`);
+//         }
+//     } else {
+//             types.push(typeof jonas[items]);
+//             console.log(`${jonas[items]} is a ${types[items]} value`);
+//     }
+// }
+
+// console.log(typeof jonas[5])
+
+
+
+// const jonas = ['Jonas', 'Schmedtmann', 2025 - 1991, 'teacher', ['Micheal', 34, 'Steven'], true];
+
+// const types = [];
+
+// for (let i = 0; i < jonas.length; i++) {
+//     console.log(jonas[i], typeof jonas[i]);
+//     types.push(typeof jonas[i]);
+// }
+
+// console.log(types);
+
+// const jonas = ['Jonas', 'Schmedtmann', 2025 - 1991, 'teacher', 
+//     ['Micheal', 34, 'Steven'], true]
+
+// let types = [];
+// let arrayValue = [];
+
+// for ( let items = 0; items < jonas.length; items++) {
+//     if ( typeof jonas[items] === 'object') {
+//         console.log('middle array')
+//         for (let i = 0; i < jonas[items].length; i++) {
+//             arrayValue.push(typeof jonas[items][i]);
+//             console.log(`${jonas[items][i]} is a ${arrayValue[i]}`);
+//         }
+//     } else {
+//         types.push(typeof jonas[items]);
+//         console.log(`${jonas[items]} is a ${types[items]} value`);
+//     }
+// }
+
+
+
+// const jonas = ['Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', 'javascript'];
+
+// for ( let i = jonas.length - 1; i >= 0; i--) {
+//     console.log(jonas[i]);
+// }
+
+
+// const gymExercise = ['Squats', 'Benching', 'Military', 'Dumbell', 'Deep'];
+
+// for (let i = 0; i < gymExercise.length; i++) {
+//     console.log('\n')
+//     console.log(`---------- ${gymExercise[i]} Exercise ----------`);
+//     for (let rep = 0; rep < 5; rep++) {
+//         console.log(`Doing ${gymExercise[i]} no ${rep+1}`);
+//     }
+// }
+
+
+
+const getTipAmount = (per, bill) => ( per / 100 ) * bill;
+
+function calcTip(bill) {
+
+    let tip;
+
+    if (bill >= 50 && bill <= 300) {
+        tip = getTipAmount(15, bill);
+    } else if (bill < 50 ) {
+        tip = 0.00;
     } else {
-            types.push(typeof jonas[items]);
-            console.log(`${jonas[items]} is a ${types[items]} value`);
+        tip = getTipAmount(20, bill );
     }
+
+    return tip;
 }
 
-console.log(typeof jonas[5])
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+let tips = [];
+let totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i])
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+
+    console.log(`${bills[i]} should give a tip of ${tips[i]}$ which is total amount ${totals[i]}$`);
+}
+
+
+let sumTotal = 0; 
+
+function calcAverage(arr) { 
+    let sum = 0; 
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    sumTotal = sum;
+    return sum / arr.length;
+}
+
+let averagebill = calcAverage(totals);
+
+console.log(`The bills and tips total amount is ${sumTotal} and the average of the total bills ${averagebill}`);
